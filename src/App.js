@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Input } from 'reactstrap';
 
 function App() {
   return (
@@ -20,8 +20,13 @@ function App() {
               VIdeo Plays here
             </div>
             <div className="search">
-              Search bar
-            </div>
+              <Input
+                  type="search"
+                  name="search"
+                  id="exampleSearch"
+                  placeholder="search placeholder"
+                />
+              </div>
           </Col>
           <div className="col-md-4 col-md-offset-4"> 
             This is the Twitter Feeds
