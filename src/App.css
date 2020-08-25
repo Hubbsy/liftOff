@@ -8,7 +8,6 @@
   outline-style: inset;;
 }
 
-
 .videoPlayer {
   height: 20rem; 
   width: 90%; 
@@ -19,7 +18,7 @@
 .search {
   height: 2rem; 
   width: 90%;
-  background-color: white;
+  background-color:whitesmoke;
   margin-bottom: 5rem;
   margin-top: 5px; 
   outline-style: solid; 
