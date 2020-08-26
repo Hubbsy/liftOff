@@ -1,12 +1,17 @@
 import React from 'react';
-import {Col} from 'reactstrap';
+import {Col, Row, Jumbotron } from 'reactstrap';
 
 
 const Header = () => {
   return (
-    <Col md="12">
-        This is the Header
-    </Col>
+    
+      <Jumbotron fluid>
+        <Row>
+          <Col m="12">
+            {/* <h1 className="display-3">LiftOff</h1> */}
+          </Col>
+        </Row>
+      </Jumbotron>
   )
 }
 
