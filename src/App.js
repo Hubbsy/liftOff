@@ -14,9 +14,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <Row>
           <Header />
-        </Row>
       </Container>
       <Container>
         <Row>
