@@ -1,16 +1,14 @@
 import React from 'react';
-import {Col} from 'reactstrap';
+import {Col,ListGroup} from 'reactstrap';
+import EachLaunch from './EachLaunch';
 
 
 const Launches = () => {
   return (
     <Col>
-      This is the rocket Launch list
-        <div>Launch Data</div>
-        <div>Launch Data</div>
-        <div>Launch Data</div>
-        <div>Launch Data</div>
-        <div>Launch Data</div>
+      <ListGroup>
+        <EachLaunch />
+      </ListGroup>
     </Col>
   )
 };
