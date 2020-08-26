@@ -4,7 +4,8 @@ import {Col} from 'reactstrap';
 
 const TwitterFeeds = () => {
   return (
-    <Col m={{ size: 'auto', offset: 4 }}> 
+    <Col className="twitter"
+     m={{ size: 'auto', offset: 4 }}> 
       This is the Twitter Feeds
     </Col>
   )

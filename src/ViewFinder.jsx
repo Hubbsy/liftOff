@@ -1,14 +1,13 @@
 import React from "react";
-import {Row, Col, Input} from 'reactstrap';
+import { Col, Input} from 'reactstrap';
 
 
 
 const ViewFinder = () => {
   return (
     <Col md="8">
-      This is the ViewFinder
       <div className="videoPlayer">
-        VIdeo Plays here
+        This is the ViewFinder
       </div>
       <div className="search">
         <Input

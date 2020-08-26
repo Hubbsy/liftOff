@@ -14,9 +14,7 @@ function App() {
   return (
     <div className="App">
       <Container>
-      <Row>
-      <Header />
-    </Row>
+          <Header />
       </Container>
       <Container>
         <Row>
@@ -26,8 +24,8 @@ function App() {
       </Container>
       <Container>
         <Row>
-        <Launches />
-        <Station />
+          <Launches />
+          <Station />
         </Row>
       </Container>
     </div>
