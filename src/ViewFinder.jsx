@@ -6,9 +6,8 @@ import { Col, Input} from 'reactstrap';
 const ViewFinder = () => {
   return (
     <Col md="8">
-      This is the ViewFinder
       <div className="videoPlayer">
-        VIdeo Plays here
+        This is the ViewFinder
       </div>
       <div className="search">
         <Input
