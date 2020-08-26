@@ -19,7 +19,7 @@
 
 .search {
   height: 2rem; 
-  width: 90%;
+  width: 75%;
   margin-bottom: 5rem;
   margin-top: 5px; 
 }
@@ -27,8 +27,7 @@
 .jumbotron {
   background-image: url("./falconHeavy.jpg");
   padding-top: 25rem; 
-  max-width: 95%;
-  margin-left: 2rem;
+  max-width: 100%;
 }
 
 
