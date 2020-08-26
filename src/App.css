@@ -1,12 +1,5 @@
 
 
-
-
-
-
-
-
-
 .App {
   text-align: center;
 }
@@ -21,7 +14,7 @@
   height: 20rem; 
   width: 90%; 
   outline-style: solid;
-  margin-top: 1rem; 
+  margin-top: 5rem; 
 }
 
 .search {
@@ -30,7 +23,6 @@
   background-color:#bcd0c7;
   margin-bottom: 5rem;
   margin-top: 5px; 
-  /* outline-style: solid;  */
 }
 
 
