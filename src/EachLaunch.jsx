@@ -1,34 +1,29 @@
 import React from 'react';
-import { Col, ListGroupItem, ListGroupItemHeading, Button, UncontrolledCollapse, ListGroupItemText } from 'reactstrap';
+import { Col, Card, CardHeader, CardBody, CardTitle, CardText, Button, CardFooter, UncontrolledCollapse, CardLink } from 'reactstrap';
 
 const EachLaunch = () => {
   return (
     <Col>
       <div>
-        <ListGroupItem className="launch">
-          <ListGroupItemHeading>This will be the launch information</ListGroupItemHeading>
+        <Card>
+        <CardHeader tag="h3">Countdown</CardHeader>
+        <CardBody>
+          <CardTitle>United Launch Alliance</CardTitle>
+          {/* <CardText>Today's launch is scheduled for ... weather is expected to be ...</CardText> */}
           <Button color="info" id="toggler" style={{ marginBottom: '1rem' }}>
             More Info
           </Button>
           <UncontrolledCollapse toggler="#toggler">
-            <ListGroupItemText>
-              Today's launch is scheduled for ... weather is expected to be ...
-            </ListGroupItemText>
+            <CardText>
+              The payload consists of an Airforce Satellite and...
+            </CardText>
           </UncontrolledCollapse>
-        </ListGroupItem>
+        </CardBody>
+          <CardFooter className="text-muted">
+          <CardLink href="#">Live Feed</CardLink>
+          </CardFooter>
+        </Card>
       </div>
-      <ListGroupItem className="launch">
-        <ListGroupItemHeading>This will be the launch information</ListGroupItemHeading>
-      </ListGroupItem>
-      <ListGroupItem className="launch">
-        <ListGroupItemHeading>This will be the launch information</ListGroupItemHeading>
-      </ListGroupItem>
-      <ListGroupItem className="launch">
-        <ListGroupItemHeading>This will be the launch information</ListGroupItemHeading>
-      </ListGroupItem>
-      <ListGroupItem className="launch">
-        <ListGroupItemHeading>This will be the launch information</ListGroupItemHeading>
-      </ListGroupItem>
     </Col>
   )
 }

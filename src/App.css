@@ -19,16 +19,18 @@
 
 .search {
   height: 2rem; 
-  width: 90%;
+  width: 75%;
   margin-bottom: 5rem;
   margin-top: 5px; 
 }
 
 .jumbotron {
-  background-image: url("./falconHeavy.jpg");
-  padding-top: 25rem; 
-  max-width: 95%;
-  margin-left: 2rem;
+  background-image: url("./assets/heavyTwo.jpg");
+  background-position: center;
+  background-size: cover;
+  max-width: 100%;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  padding:20rem;
 }
 
 
@@ -41,8 +43,20 @@
   margin:1rem;
 }
 
+.card {
+  margin-bottom:1rem; 
+}
 
+.navbar {
+  width: 90%;
+  padding-left: 10rem;
+  padding-top: 2rem;
+  color:#2892d7;
+}
 
+#navItem {
+  color:#58b9d1;
+}
 
 
 
