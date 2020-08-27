@@ -15,7 +15,7 @@ const EachLaunch = () => {
           </Button>
           <UncontrolledCollapse toggler="#toggler">
             <CardText>
-              The payload consists of a Airforce Sattellite and...
+              The payload consists of an Airforce Satellite and...
             </CardText>
           </UncontrolledCollapse>
         </CardBody>

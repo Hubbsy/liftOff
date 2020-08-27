@@ -8,7 +8,6 @@ const Header = () => {
       <Jumbotron fluid>
         <Row>
           <Col m="12">
-            {/* <h1 className="display-3">LiftOff</h1> */}
           </Col>
         </Row>
       </Jumbotron>
