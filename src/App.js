@@ -28,7 +28,7 @@ function App() {
       <Container>
         <Row>
           <Launches />
-          <Station />
+          <Station/>
         </Row>
       </Container>
     </div>

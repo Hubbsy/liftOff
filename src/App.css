@@ -62,9 +62,9 @@
 }
 
 #map {
-  background-color: blue;
+  /* background-color: blue; */
   height: 400px; 
-  width: 800px;  
+  width: 100%;  
 }
 
 
