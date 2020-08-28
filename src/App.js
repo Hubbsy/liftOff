@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import { Container, Row, Nav, NavLink, Navbar, NavbarBrand,NavbarToggler, Collapse, NavItem} from 'reactstrap';
+import { Container, Row} from 'reactstrap';
 
 //Component Imports
 import ViewFinder from './ViewFinder.jsx';
@@ -28,7 +28,7 @@ function App() {
       <Container>
         <Row>
           <Launches />
-          <Station />
+          <Station/>
         </Row>
       </Container>
     </div>
