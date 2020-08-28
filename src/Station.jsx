@@ -13,17 +13,18 @@ class Station extends React.Component {
     this.state = ({
       location: []
     })
+    this.locateISS = this.locateISS.bind(this);
+    this.mapMaker = this.mapMaker.bind(this);
   }
-
-  intervalId; 
+  // intervalId;
 
   componentDidMount() {
     this.mapMaker();
-    
+    // this.locateISS();
   };
 
   componentWillUnmount() {
-    clearInterval(this.intervalId)
+    // clearInterval(this.intervalId)
   }
 
   
@@ -39,7 +40,7 @@ class Station extends React.Component {
           location: data
         })
         marker.setLatLng([this.state.location.data.iss_position.latitude, this.state.location.data.iss_position.longitude])})
-      .then(this.intervalId = setInterval(this.locateISS.bind(this), 60000))
+      // .then(this.intervalId = setInterval(this.locateISS.bind(this), 60000))
       .catch((err) => {
         console.log(err);
       })
@@ -56,7 +57,12 @@ class Station extends React.Component {
         }),
       ]
     });
-    let marker = this.marker = L.marker([0,0]).addTo(this.map);
+    var issIcon = L.divIcon({
+      className: 'iss-icon',
+      iconSize: [40, 40],
+       html: '<span></span>'
+     });
+    let marker = this.marker = L.marker([0,0], {icon:issIcon}).addTo(this.map);
     marker.bindPopup("This is the most recent position of the ISS").openPopup();
     this.locateISS(marker);
   };
