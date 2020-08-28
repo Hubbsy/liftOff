@@ -23,9 +23,7 @@ class Station extends React.Component {
     // this.locateISS();
   };
 
-  componentWillUnmount() {
-    // clearInterval(this.intervalId)
-  }
+ 
 
   
 
@@ -64,7 +62,7 @@ class Station extends React.Component {
      });
     let marker = this.marker = L.marker([0,0], {icon:issIcon}).addTo(this.map);
     marker.bindPopup("This is the most recent position of the ISS").openPopup();
-    this.locateISS(marker);
+    setInterval(()=> this.locateISS(marker),7000);
   };
 
 

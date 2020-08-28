@@ -65,12 +65,18 @@
   /* background-color: blue; */
   height: 400px; 
   width: 100%;  
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
+
 }
 
 .iss-icon {
   background-image: url("./assets/space-station.png");
   background-position: center;
   /* background-size: cover; */
+}
+
+.mr-auto {
+  background-image: url('./assets/logo.png');
 }
 
 
