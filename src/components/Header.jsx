@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Row, Jumbotron, Nav, NavLink, Navbar, NavbarToggler, Collapse, NavItem  } from 'reactstrap';
+import { Row, Col, Jumbotron, Nav, NavLink, Navbar, NavbarToggler, Collapse, NavItem, NavbarBrand } from 'reactstrap';
 
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
     <Jumbotron >
        <Row>
         <Navbar id="navbar" bg="dark"  light fixed="top" >
-          {/* <NavbarBrand id="navItem" href="/" className="mr-auto">LiftOff!</NavbarBrand> */}
+          <NavbarBrand id="logo" href="/" className="mr-auto"> </NavbarBrand>
           <NavbarToggler  color="primary"  onClick={toggleNavbar} className="mr-2" />
             <Collapse isOpen={!collapsed} navbar>
               <Nav navbar>
@@ -38,6 +38,7 @@ const Header = () => {
             </Nav>
           </Collapse>
         </Navbar>
+        {/* <Col id="logo"></Col> */}
       </Row> 
     </Jumbotron>
       

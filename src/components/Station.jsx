@@ -2,8 +2,7 @@ import React from 'react';
 import {Col} from 'reactstrap';
 import L from 'leaflet';
 import axios from 'axios';
-// import locateISS from './helpers/locateISS.js'
-// import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
+
 
 
 class Station extends React.Component {
@@ -13,18 +12,16 @@ class Station extends React.Component {
     this.state = ({
       location: []
     })
+    this.locateISS = this.locateISS.bind(this);
+    this.mapMaker = this.mapMaker.bind(this);
   }
-
-  intervalId; 
+ 
 
   componentDidMount() {
     this.mapMaker();
-    
   };
 
-  componentWillUnmount() {
-    clearInterval(this.intervalId)
-  }
+ 
 
   
 
@@ -39,7 +36,7 @@ class Station extends React.Component {
           location: data
         })
         marker.setLatLng([this.state.location.data.iss_position.latitude, this.state.location.data.iss_position.longitude])})
-      .then(this.intervalId = setInterval(this.locateISS.bind(this), 60000))
+      // .then(this.intervalId = setInterval(this.locateISS.bind(this), 60000))
       .catch((err) => {
         console.log(err);
       })
@@ -56,9 +53,14 @@ class Station extends React.Component {
         }),
       ]
     });
-    let marker = this.marker = L.marker([0,0]).addTo(this.map);
+    var issIcon = L.divIcon({
+      className: 'iss-icon',
+      iconSize: [40, 40],
+       html: '<span></span>'
+     });
+    let marker = this.marker = L.marker([0,0], {icon:issIcon}).addTo(this.map);
     marker.bindPopup("This is the most recent position of the ISS").openPopup();
-    this.locateISS(marker);
+    setInterval(()=> this.locateISS(marker),10000);
   };
 
 
