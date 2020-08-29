@@ -11,8 +11,8 @@
 }
 
 .videoPlayer {
-  height: 20rem; 
-  width: 80%; 
+  height: 30rem; 
+  width: 100%; 
   outline-style: solid;
   margin-top: 5rem; 
 
@@ -32,11 +32,11 @@
   max-width: 100%;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
   margin-top:5.5rem; 
-  padding-bottom:40rem; 
+  padding-bottom:36rem; 
 }
 
 .twitter {
-  background-color:#bcd0c7;
+  /* background-color:#bcd0c7; */
 }
 
 .launch {
