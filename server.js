@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 const path = require('path');
+const http = require('http');
 const app = express();
 
 const PORT = process.env.PORT || 3001; 
@@ -9,6 +10,10 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'build')));
+
+
+
+const server = http.createServer(app);
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
@@ -21,6 +26,6 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-app.listen(PORT, () => {
-  console.log('Houston we have a Connection!')
+server.listen(PORT, () => {
+  console.log(`Houston we have a Connection on ${PORT}!!`)
 });
