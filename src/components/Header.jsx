@@ -12,6 +12,7 @@ const Header = () => {
 
     <Jumbotron >
        <Row>
+       <Col>
         <Navbar id="navbar" bg="dark"  light fixed="top" >
           <NavbarBrand id="logo" href="/" className="mr-auto"> </NavbarBrand>
           <NavbarToggler  color="primary"  onClick={toggleNavbar} className="mr-2" />
@@ -39,6 +40,7 @@ const Header = () => {
           </Collapse>
         </Navbar>
         {/* <Col id="logo"></Col> */}
+        </Col>
       </Row> 
     </Jumbotron>
       
