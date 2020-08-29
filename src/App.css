@@ -12,7 +12,7 @@
 
 .videoPlayer {
   height: 20rem; 
-  width: 90%; 
+  width: 80%; 
   outline-style: solid;
   margin-top: 5rem; 
 
@@ -31,9 +31,9 @@
   background-size: cover;
   max-width: 100%;
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  padding:20rem;
+  margin-top:5.5rem; 
+  padding-bottom:40rem; 
 }
-
 
 .twitter {
   background-color:#bcd0c7;
@@ -58,7 +58,8 @@
 }
 
 #navItem {
-  color:#58b9d1;
+  /* color:#58b9d1; */
+  color:black; 
 }
 
 #map {
@@ -75,8 +76,15 @@
   /* background-size: cover; */
 }
 
-.mr-auto {
+#logo {
   background-image: url('./assets/logo.png');
+  background-position: center;
+  background-size: cover;
+  /* max-width: 100%; */
+  width:20rem;
+  height:5rem;
+  padding-left:5rem; 
+  padding-right:5rem;
 }
 
 

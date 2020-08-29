@@ -2,8 +2,7 @@ import React from 'react';
 import {Col} from 'reactstrap';
 import L from 'leaflet';
 import axios from 'axios';
-// import locateISS from './helpers/locateISS.js'
-// import {Map, TileLayer, Marker, Popup} from 'react-leaflet';
+
 
 
 class Station extends React.Component {
@@ -16,11 +15,10 @@ class Station extends React.Component {
     this.locateISS = this.locateISS.bind(this);
     this.mapMaker = this.mapMaker.bind(this);
   }
-  // intervalId;
+ 
 
   componentDidMount() {
     this.mapMaker();
-    // this.locateISS();
   };
 
  
@@ -62,7 +60,7 @@ class Station extends React.Component {
      });
     let marker = this.marker = L.marker([0,0], {icon:issIcon}).addTo(this.map);
     marker.bindPopup("This is the most recent position of the ISS").openPopup();
-    setInterval(()=> this.locateISS(marker),7000);
+    setInterval(()=> this.locateISS(marker),10000);
   };
 
 
