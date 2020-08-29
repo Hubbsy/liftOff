@@ -28,7 +28,6 @@ class Station extends React.Component {
   async locateISS(marker) {
       await axios.get("http://api.open-notify.org/iss-now.json")
       .then((response) => {
-        console.log(response);
         return response; 
       })
       .then((data) => {
