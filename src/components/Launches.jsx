@@ -37,13 +37,13 @@ class Launches extends React.Component {
   render() {
     return (
       <Col>
-      <ListGroup>
-      {this.state.launches.map((launch) => {
-        return (
-          <EachLaunch launches={launch} />
-        )
-      })}  
-      </ListGroup>
+        <ListGroup>
+        {this.state.launches.map((launch) => {
+          return (
+            <EachLaunch launches={launch} />
+          )
+        })}  
+        </ListGroup>
       </Col>
     )
   }

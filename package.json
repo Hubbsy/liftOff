@@ -20,6 +20,7 @@
     "react-scripts": "3.4.3",
     "reactstrap": "^8.5.1",
     "socket.io": "^2.3.0",
+    "twit": "^2.2.11",
     "twitter": "^1.7.1"
   },
   "proxy": "http://localhost:3001",
