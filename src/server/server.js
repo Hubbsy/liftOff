@@ -36,7 +36,7 @@ require('./routes/tweets.js')(app, io);
 //     res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 //   });
 // }
-
+// process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";rs
 
 server.listen(PORT, () => {
   console.log(`Houston we have a Connection on ${PORT}!!`)
