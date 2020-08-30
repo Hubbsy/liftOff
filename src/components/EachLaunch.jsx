@@ -2,25 +2,7 @@ import React from 'react';
 import { Col, Card, CardHeader, CardBody, CardTitle, CardText, Button, CardFooter, UncontrolledCollapse, CardLink } from 'reactstrap';
 
 const EachLaunch = (props) => {
-  console.log(props.launches.quicktext);
-
- 
-
-
-  // let liveLink = function returnLink() {
-  //   let string = props.launches.quicktext;
-  //   let link = string.substr(60, string.length - 1); 
-  //   let result;
-  //   for (var i = 0; i <= link.length; i++) {
-  //     if (link.includes('https')) {
-  //        result = link.slice(link.indexOf('https'), -1);
-  //     } 
-  //   }
-  //   return result; 
-  // }
-
-
-
+  
   return (
     <Col>
       <div>
