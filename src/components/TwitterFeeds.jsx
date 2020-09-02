@@ -1,7 +1,8 @@
 import React from 'react';
-import {Col} from 'reactstrap';
-import socketIOClient from 'socket.io-client'; 
-import EachTweet from './EachTweet.jsx';
+import {Col, ListGroup} from 'reactstrap';
+import io from 'socket.io-client'; 
+import EachTweet from './EachTweet.jsx'
+// import $ from 'jquery';
 
 class TwitterFeeds extends React.Component {
 
@@ -14,22 +15,15 @@ class TwitterFeeds extends React.Component {
 
 
 
-
   componentDidMount() {
-    const socket = socketIOClient('http://localhost:3000/')
-    socket.on('connect', () => {
-      console.log("Socket Connected");
-      socket.on("tweets", data => {
-        console.log(data);
-        let newList = [data].concat(this.state.tweets.slice(0, 15));
-        this.setState({ tweets: newList });
-      });
-    });
-    socket.on('disconnect', () => {
-      socket.off("tweets")
-      socket.removeAllListeners("tweets");
-      console.log("Socket Disconnected");
-    });
+    var socket = io.connect('http://localhost:3000');
+        socket.on('stream', (data) => {
+          
+          let newList = [data].concat(this.state.tweets.slice(0,5))
+          this.setState({
+            tweets: newList
+          })
+        });
   }
 
 
@@ -37,7 +31,14 @@ class TwitterFeeds extends React.Component {
   render() {
     return (
       <Col className="twitter">
-        <EachTweet></EachTweet>
+        {/* <div id="tweets"></div> */}
+        <ListGroup>
+        {this.state.tweets.map((tweet) => {
+          return (
+            <EachTweet tweets={tweet}/>
+          )
+        })}
+        </ListGroup>
       </Col>
     )
   }

@@ -37,6 +37,8 @@
 
 .twitter {
   /* background-color:#bcd0c7; */
+  max-height: 40rem;
+  overflow: scroll;
 }
 
 .launch {
