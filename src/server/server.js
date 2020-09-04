@@ -5,7 +5,6 @@ const http = require('http');
 const server = http.createServer(app);
 const Twit = require('twit');
 const io = require('socket.io').listen(server);
-// const path = require('path');
 const bodyParser = require('body-parser');
 
 
@@ -16,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 
 
-let watchlist = ['NASA'];
+let watchlist = ['@Space_Station, @Astro_SEAL, @Astro_Behnken, @Astro_Doug, @NASA'];
 
 
 
@@ -30,20 +29,19 @@ let T = new Twit({
 
   io.sockets.on('connection', function(socket) {
 
-    let stream = T.stream('statuses/filter', { track:watchlist });
+    let stream = T.stream('statuses/filter', { track: watchlist });
 
     stream.on('tweet', function(tweet) {
         io.sockets.emit('stream', {
-          image: tweet.user.profile_background_image_url,
+          image: tweet.user.profile_image_url_https,
           date: new Date(tweet.created_at).toLocaleTimeString(),
           text: tweet.text, 
-          user: tweet.user.screen_name
+          user: tweet.user.screen_name,
+          url: tweet.user.screen_name
         })
     });
   });
 
-
-  // `${tweet.user.profile_background_image_url}, ${new Date(tweet.created_at).toLocaleTimeString()}, ${tweet.text}, @${tweet.user.screen_name}`
 
 
 server.listen(PORT, () => {
