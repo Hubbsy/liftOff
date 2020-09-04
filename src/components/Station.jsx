@@ -65,9 +65,9 @@ class Station extends React.Component {
 
   render() {
     return (
-    <Col>
-     <div id="map"></div>
-    </Col>
+      <Col xs="6">
+        <div id="map"></div>
+      </Col>
     )
   }
 }
