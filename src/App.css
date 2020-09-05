@@ -7,14 +7,13 @@
 
 .container {
   display: grid;
-  margin-top: 1rem;
+  background-color:#f5f5f5;
 }
 
 .videoPlayer {
   height: 30rem; 
   width: 100%; 
   outline-style: solid;
-  margin-top: 5rem; 
 
 }
 
@@ -22,27 +21,31 @@
   height: 2rem; 
   width: 75%;
   margin-bottom: 5rem;
-  margin-top: 5px; 
+  margin-top: .5rem; 
 }
 
 .jumbotron {
-  background-image: url("./assets/heavyTwo.jpg");
   background-position: center;
   background-size: cover;
   max-width: 100%;
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
-  margin-top:5.5rem; 
-  padding-bottom:36rem; 
+  max-height: 100%;
+  /* box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.75); */
+  border-radius: 5%;
+  margin-top:2rem;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%; 
+  background-color: #f5f5f5; 
 }
 
 .twitter {
-  /* background-color:#bcd0c7; */
   max-height: 40rem;
-  overflow: scroll;
+  overflow: scroll; 
+  
 }
 
 .launch {
-  /* background-color:#e0e0e0; */
   margin:1rem;
   
 }
@@ -55,7 +58,7 @@
 .navbar {
   width: 90%;
   padding-left: 11rem;
-  padding-top: 2rem;
+  /* padding-top: 2rem; */
   color:#2892d7;
 }
 
@@ -69,24 +72,22 @@
   height: 400px; 
   width: 100%;  
   box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.75);
+  margin-top: 2rem;
 
 }
 
 .iss-icon {
   background-image: url("./assets/space-station.png");
   background-position: center;
-  /* background-size: cover; */
 }
 
 #logo {
   background-image: url('./assets/logo.png');
   background-position: center;
   background-size: cover;
-  /* max-width: 100%; */
-  width:20rem;
+  width:32%;
   height:5rem;
-  padding-left:5rem; 
-  padding-right:5rem;
+
 }
 
 #pic {
@@ -102,6 +103,7 @@
   width: 100%;
   box-shadow: none;
   border-radius: 5%;
+  font-size: 15px; 
 }
 
 

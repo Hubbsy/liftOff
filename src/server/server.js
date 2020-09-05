@@ -6,6 +6,7 @@ const server = http.createServer(app);
 const Twit = require('twit');
 const io = require('socket.io').listen(server);
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 
 const PORT = process.env.PORT || 3001;
@@ -13,9 +14,10 @@ const PORT = process.env.PORT || 3001;
 
 
 app.use(bodyParser.json());
+app.use(cors());
 
 
-let watchlist = ['@Space_Station, @Astro_SEAL, @Astro_Behnken, @Astro_Doug, @ISS_Astronauts, @ISS, Astronauts, @Astro_Jeanette, @ESA'];
+let watchlist = ['@NASA'];
 
 
 
