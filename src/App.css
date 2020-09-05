@@ -90,8 +90,8 @@
 }
 
 #pic {
-  max-height: 4rem;
-  max-width: 4rem;
+  max-height: 3rem;
+  max-width: 3rem;
   border-radius: 180%; 
   padding-bottom:none; 
   float: left; 
@@ -99,8 +99,9 @@
 
 .tweet {
   max-height: fit-content;
-  max-width: 100%;
+  width: 100%;
   box-shadow: none;
+  border-radius: 5%;
 }
 
 
