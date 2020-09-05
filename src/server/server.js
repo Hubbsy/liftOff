@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.json());
 
 
-let watchlist = ['@Space_Station, @Astro_SEAL, @Astro_Behnken, @Astro_Doug, @ISS_Astronauts, @ISS, Astronauts, @Astro_Jeanette, @NASA'];
+let watchlist = ['@Space_Station, @Astro_SEAL, @Astro_Behnken, @Astro_Doug, @ISS_Astronauts, @ISS, Astronauts, @Astro_Jeanette, @ESA'];
 
 
 

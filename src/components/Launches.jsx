@@ -2,6 +2,7 @@ import React from 'react';
 import {Col, ListGroup, ListGroupItem} from 'reactstrap';
 import EachLaunch from './EachLaunch';
 import axios from 'axios';
+import uniqid from 'uniqid';
 
 
 class Launches extends React.Component {
@@ -40,7 +41,7 @@ class Launches extends React.Component {
         <ListGroup>
         {this.state.launches.map((launch) => {
           return (
-            <EachLaunch launches={launch} />
+            <EachLaunch key={uniqid()} launches={launch} />
           )
         })}  
         </ListGroup>

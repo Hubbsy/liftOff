@@ -2,7 +2,7 @@ import React from 'react';
 import {Col, ListGroup} from 'reactstrap';
 import io from 'socket.io-client'; 
 import EachTweet from './EachTweet.jsx'
-// import $ from 'jquery';
+import uniqid from 'uniqid';
 
 class TwitterFeeds extends React.Component {
 
@@ -33,7 +33,7 @@ class TwitterFeeds extends React.Component {
         <ListGroup>
           {this.state.tweets.map((tweet) => {
             return (
-              <EachTweet tweets={tweet}/>
+              <EachTweet key={uniqid()} tweets={tweet}/>
             )
           })}
         </ListGroup>
