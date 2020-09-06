@@ -30,9 +30,9 @@ class DailyImage extends React.Component {
 
 
   render() {
-    console.log(this.state)
+    
     return (
-        <img className="jumbotron" src={this.state.image.hdurl} alt="../assets/heavyTwo.jpg" /> 
+        <img className="jumbotron" src={this.state.image.hdurl} alt="the NASA APOD is currently being updated" /> 
     )
   }
 
