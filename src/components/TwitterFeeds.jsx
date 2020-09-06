@@ -18,7 +18,7 @@ class TwitterFeeds extends React.Component {
   componentDidMount() {
     var socket = io.connect('http://localhost:3000');
         socket.on('stream', (data) => {
-          let newList = [data].concat(this.state.tweets.slice())
+          let newList = [data].concat(this.state.tweets.slice(0,15));
           this.setState({
             tweets: newList
           })
@@ -30,7 +30,7 @@ class TwitterFeeds extends React.Component {
   render() {
     return (
       <Col className="twitter">
-      <h2>Live Twitter Feed</h2>
+      <h2>Twitter Feed</h2>
         <ListGroup>
           {this.state.tweets.map((tweet) => {
             return (

@@ -3,7 +3,7 @@ import { Col, Card, CardBody, CardText, CardLink, CardSubtitle, CardImg } from '
 
 
 const EachTweet = (props) => {
-  
+  console.log(props)
   return (
     
       <Col>
