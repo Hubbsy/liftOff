@@ -1,24 +1,49 @@
 import React from "react";
-import { Col, Input} from 'reactstrap';
+import { Col } from 'reactstrap';
+import Search from './Search.jsx';
+import VideoPlayer from './VideoPlayer.jsx';
+import searchYouTube from '../helpers/searchYouTube.js';
+
+class ViewFinder extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data: , 
+      currentVideo: , 
+      value: , 
+    }
+    this.getYouTubeVideos = this.getYouTubeVideos.bind(this)
+  }
 
 
+  componentDidMount() {
+    this.getYouTubeVideos('SpaceX'); 
+  }
 
-const ViewFinder = () => {
-  return (
-    <Col md="8">
-      <div className="videoPlayer">
-        This is the ViewFinder
-      </div>
-      <div className="search">
-        <Input
-            type="search"
-            name="search"
-            id="searchBar"
-            placeholder="Search for Launches here!"
-          />
-        </div>
-    </Col>
-  )
+  getYouTubeVideos(query) {
+    var options = {
+      key: TUBE_API,
+      query: query
+    };
+    searchYouTube(options, (videos) => {
+      this.setState({
+        data: videos, 
+        currentVideo: videos[0]
+      });
+    });
+  };
+
+
+  render() {
+    return (
+      <Col md="8">
+        <VideoPlayer />
+        <Search />
+      </Col>
+    )
+  }
 }
 
 
