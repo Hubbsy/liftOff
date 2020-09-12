@@ -18,9 +18,9 @@ class TwitterFeeds extends React.Component {
   componentDidMount() {
     var socket = io.connect('http://localhost:3000');
         socket.on('stream', (data) => {
-          let newList = [data].concat(this.state.tweets.slice(0,15));
+          let newList = [...[data]];
           this.setState({
-            tweets: newList
+            tweets: newList.concat(this.state.tweets.slice(0,10))
           })
         });
   }
