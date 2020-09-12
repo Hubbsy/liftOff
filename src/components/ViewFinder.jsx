@@ -10,9 +10,9 @@ class ViewFinder extends React.Component {
     super(props)
 
     this.state = {
-      data: , 
-      currentVideo: , 
-      value: , 
+      data:[], 
+      currentVideo: '', 
+      value: '' 
     }
     this.getYouTubeVideos = this.getYouTubeVideos.bind(this)
   }
@@ -24,7 +24,7 @@ class ViewFinder extends React.Component {
 
   getYouTubeVideos(query) {
     var options = {
-      key: TUBE_API,
+      key: process.env.REACT_APP_TUBE_API_KEY,
       query: query
     };
     searchYouTube(options, (videos) => {
