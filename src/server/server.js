@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 
-let watchlist = ['@SpaceX', '@ESA'];
+let watchlist = ['@NASA', '@ESA', '@SpaceX'];
 
 
 
