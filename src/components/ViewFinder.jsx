@@ -37,21 +37,27 @@ class ViewFinder extends React.Component {
     });
   };
 
-  // handleClick(video) {
-  //   this.setState({
-  //     currentVideo: video
-  //   })
-  // }
 
-  
-  
- 
+  handleChange(inputValue) {
+    this.setState({
+      value: inputValue
+    })
+  }
+
+  keyPress(e) {
+    if (e.keyCode === 13) {
+      console.log('pressed enter!!!')
+      this.getYouTubeVideos(this.state.value)
+    }
+  }
 
   render() {
     return (
       <Col md="8">
         <VideoPlayer video={this.state.currentVideo} />
-        <Search handleSearchInput={this.getYouTubeVideos} value={this.state.value} data={this.state.data} />
+        <Search handleSearchInput={this.handleChange}     value={this.state.value} data={this.state.data}
+        keyPress={this.keyPress}  
+        />
       </Col>
     )
   }

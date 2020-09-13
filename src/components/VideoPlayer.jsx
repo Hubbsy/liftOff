@@ -7,7 +7,7 @@ const VideoPlayer = (props) => {
     return (
       <div className="videoPlayer">
           <div className="embed-responsive embed-responsive-16by9">
-          <iframe src={`https://www.youtube.com/embed/lXgLyCYuYA4`} frameborder="0"  allowFullScreen></iframe>
+          <iframe src={`https://www.youtube.com/embed/DDU-rZs-Ic4`} frameborder="0"  allowFullScreen></iframe>
           </div>
       </div>
     ) 
