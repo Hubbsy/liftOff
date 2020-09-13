@@ -7,7 +7,7 @@ const Twit = require('twit');
 const io = require('socket.io').listen(server);
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
+const helmet = require('helmet');
 
 const PORT = process.env.PORT || 3001;
 
@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(helmet.frameguard({action: 'SAMEORIGIN'}))
 
 
 let watchlist = ['@NASA', '@ESA', '@SpaceX'];
