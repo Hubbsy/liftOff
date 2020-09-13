@@ -30,7 +30,7 @@ class TwitterFeeds extends React.Component {
   render() {
     return (
       <Col className="twitter">
-      <h2>Twitter Feed</h2>
+      <h2>Twitterverse</h2>
         <ListGroup>
           {this.state.tweets.map((tweet) => {
             return (
