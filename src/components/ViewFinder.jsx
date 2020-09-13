@@ -15,7 +15,8 @@ class ViewFinder extends React.Component {
       value: '' 
     }
     this.getYouTubeVideos = this.getYouTubeVideos.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.keyPress = this.keyPress.bind(this);
   }
 
 
@@ -25,7 +26,7 @@ class ViewFinder extends React.Component {
 
   getYouTubeVideos(query) {
     var options = {
-      key: 'AIzaSyB2Oq_Zm6OZpLHYi3NiS7NNWZK0qFs1cqs',
+      key: process.env.REACT_APP_TUBE_API_KEY,
       query: query
     };
     searchYouTube(options, (videos) => {
@@ -42,12 +43,9 @@ class ViewFinder extends React.Component {
   //   })
   // }
 
-  handleChange(input) {
-    this.setState({
-      value: input
-    })
-  }
-
+  
+  
+ 
 
   render() {
     return (

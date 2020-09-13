@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {Jumbotron} from 'reactstrap';
+
 
 
 class DailyImage extends React.Component {
@@ -32,7 +32,9 @@ class DailyImage extends React.Component {
   render() {
     
     return (
+      <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">
         <img className="jumbotron" src={this.state.image.hdurl} alt="the NASA APOD is currently being updated" /> 
+      </a>  
     )
   }
 

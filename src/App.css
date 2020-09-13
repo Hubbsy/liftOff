@@ -11,7 +11,7 @@
 }
 
 .videoPlayer {
-  height: 25rem; 
+  /* height: 25rem;  */
   width: 100%; 
   /* outline-style: inset; */
 
@@ -104,6 +104,7 @@
   box-shadow: none;
   border-radius: 5%;
   font-size: 15px; 
+  
 }
 
 
