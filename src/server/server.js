@@ -18,7 +18,7 @@ app.use(cors());
 app.use(helmet.frameguard({action: 'SAMEORIGIN'}))
 
 
-let watchlist = ['@NASA', '@ESA', '@SpaceX'];
+let follow = ['11348282', '14091091'];//NASA twitter id's
 
 
 
@@ -32,7 +32,7 @@ let T = new Twit({
 
   io.sockets.on('connection', function(socket) {
 
-    let stream = T.stream('statuses/filter', { track: watchlist });
+    let stream = T.stream('statuses/filter', { follow: follow, language: 'en' });
 
     stream.on('tweet', function(tweet) {
         io.sockets.emit('stream', {
