@@ -25,6 +25,7 @@
 }
 
 .jumbotron {
+  /* background-image: url('https://www.teslarati.com/wp-content/uploads/2018/02/Falcon-Heavy-side-booster-landings-SpaceX-e1518547599594.jpg'); */
   background-position: center;
   background-size: cover;
   max-width: 100%;
@@ -86,8 +87,7 @@
   background-position: center;
   background-size: cover;
   width:32%;
-  height:5rem;
-
+  height:6rem;
 }
 
 #pic {
