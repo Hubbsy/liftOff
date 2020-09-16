@@ -6,7 +6,8 @@ const searchYouTube = ({key, query, max = 5}, callback) => {
     key: key, 
     maxResults: max, 
     q: query, 
-    type:'video', 
+    type:'video',
+    videoCategoryId: '28', 
     videoEmbeddable: 'true'
   })
   .done(({items}) => {

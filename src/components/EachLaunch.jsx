@@ -2,12 +2,15 @@ import React from 'react';
 import { Col, Card, CardHeader, CardBody, CardTitle, CardText, Button, CardFooter, UncontrolledCollapse, CardLink } from 'reactstrap';
 
 const EachLaunch = (props) => {
-  
+  console.log(props.launches.quicktext)
+  let string = props.launches.quicktext.slice(55, -1); 
+  let countdown = string.slice(string.indexOf('('), string.indexOf(')') );
+  console.log(countdown)
   return (
     <Col>
       <div>
         <Card>
-          <CardHeader tag="h3">Countdown</CardHeader>
+          <CardHeader tag="h3">{countdown.slice(1)}</CardHeader>
             <CardBody>
               <CardTitle>{props.launches.provider.name}</CardTitle>
               {/* <CardText>Today's launch is scheduled for ... weather is expected to be ...</CardText> */}
