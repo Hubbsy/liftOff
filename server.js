@@ -9,6 +9,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const path = require('path');
+const axios = 'axios';
 
 const PORT = process.env.PORT || 3001;
 
@@ -24,6 +25,14 @@ app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", process.env.ORIGIN || "*");
   next();
 });
+
+app.get("/api/station", (req, res) => {
+  axios.get('http://api.open-notify.org/iss-now.json')
+  .then(response => response.json())
+  .then(data => {
+    res.send({data});
+  })
+})
 
 
 let follow = ['11348282', '14091091'];//NASA twitter id's
@@ -64,9 +73,7 @@ let T = new Twit({
     });
   }
 
-  app.get("/api/station", (req, res) => {
-    res.json().send();
-  })
+  
 
 
 
