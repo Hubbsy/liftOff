@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const helmet = require('helmet');
 const path = require('path');
-const axios = 'axios';
+const axios = require('axios');
 
 const PORT = process.env.PORT || 3001;
 
@@ -28,12 +28,9 @@ app.use((req, res, next) => {
 
 app.get("/api/station", (req, res) => {
   axios.get('http://api.open-notify.org/iss-now.json')
-  .then(response => res.status(201).json({response}))
-  .then(json => {
-    res.send(json);
-  })
+  .then(json => res.send(json.data))
   .catch(err => {
-    console.log(err);
+    res.redirect(err)
   })
 })
 

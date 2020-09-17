@@ -26,10 +26,11 @@ class Station extends React.Component {
   async locateISS(marker) {
       await axios.get("/api/station")
       .then((response) => {
+        console.log(response)
         return response; 
       })
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         this.setState ({
           location: data
         })

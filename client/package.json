@@ -25,7 +25,7 @@
     "twitter": "^1.7.1",
     "uniqid": "^5.2.0"
   },
-  "proxy": "http://localhost:3001",
+  "proxy": "https://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
     "server": "nodemon ../server.js",
