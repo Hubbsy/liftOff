@@ -3,7 +3,7 @@ import { Col } from 'reactstrap';
 import Search from './Search.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 import searchYouTube from '../helpers/searchYouTube.js';
-const TUBE_API = AIzaSyDyZcC0RegIfrZkLbapHQBwRhF5SlDWm9Q;
+const TUBE_API = 'AIzaSyDyZcC0RegIfrZkLbapHQBwRhF5SlDWm9Q';
 class ViewFinder extends React.Component {
 
   constructor(props) {
