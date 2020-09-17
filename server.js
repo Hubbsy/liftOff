@@ -28,9 +28,9 @@ app.use((req, res, next) => {
 
 app.get("/api/station", (req, res) => {
   axios.get('http://api.open-notify.org/iss-now.json')
-  .then(response => response.json())
-  .then(data => {
-    res.send(data);
+  .then(response => res.status(201).json({response}))
+  .then(json => {
+    res.send(json);
   })
   .catch(err => {
     console.log(err);
