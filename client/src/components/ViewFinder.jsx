@@ -46,7 +46,6 @@ class ViewFinder extends React.Component {
 
   keyPress(e) {
     if (e.keyCode === 13) {
-      console.log('pressed enter!!!')
       this.getYouTubeVideos(this.state.value)
     }
   }
