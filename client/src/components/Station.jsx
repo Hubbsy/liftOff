@@ -29,6 +29,7 @@ class Station extends React.Component {
         return response; 
       })
       .then((data) => {
+        console.log(data)
         this.setState ({
           location: data
         })
