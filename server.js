@@ -63,6 +63,10 @@ let T = new Twit({
     });
   }
 
+  app.get("/api/station", (req, res) => {
+    const url = 'http://api.open-notify.org/iss-now.json';
+    request(url).pipe(res);
+  })
 
 
 
