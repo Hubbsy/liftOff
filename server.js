@@ -65,7 +65,7 @@ let T = new Twit({
   }
 
   app.get("/api/station", (req, res) => {
-    res.send();
+    res.json().send();
   })
 
 
