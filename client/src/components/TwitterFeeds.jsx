@@ -16,7 +16,7 @@ class TwitterFeeds extends React.Component {
 
 
   componentDidMount() {
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('https://localhost:3001');
         socket.on('stream', (data) => {
           let newList = [...[data]];
           this.setState({
