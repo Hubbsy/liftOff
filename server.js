@@ -1,8 +1,8 @@
 const express = require('express');
 require('dotenv').config();
 const app = express();
-const http = require('http');
-const server = http.createServer(app);
+const https = require('https');
+const server = https.createServer(app);
 const Twit = require('twit');
 const io = require('socket.io').listen(server);
 const bodyParser = require('body-parser');
