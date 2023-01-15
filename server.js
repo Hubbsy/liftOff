@@ -40,10 +40,10 @@ let follow = ['11348282', '14091091'];//NASA twitter id's
 
 
 let T = new Twit({
-    consumer_key: process.env.TWITTER_CONSUMER_KEY,
-    consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-    access_token: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+    consumer_key: process.env.REACT_APP_TWITTER_CONSUMER_KEY,
+    consumer_secret: process.env.REACT_APP_TWITTER_CONSUMER_SECRET,
+    access_token: process.env.REACT_APP_TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.REACT_APP_TWITTER_ACCESS_TOKEN_SECRET
   });
 
 
