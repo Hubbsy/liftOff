@@ -25,7 +25,7 @@ class ViewFinder extends React.Component {
 
   getYouTubeVideos(query) {
     var options = {
-      key: AIzaSyDyZcC0RegIfrZkLbapHQBwRhF5SlDWm9Q,
+      key: 'AIzaSyDyZcC0RegIfrZkLbapHQBwRhF5SlDWm9Q',
       query: query
     };
     searchYouTube(options, (videos) => {
