@@ -16,7 +16,7 @@ class TwitterFeeds extends React.Component {
 
 
   componentDidMount() {
-    var socket = io.connect('https://fabulous-otter-705d68.netlify.app/');
+    var socket = io.connect('https://fabulous-otter-705d68.netlify.app');
         socket.on('stream', (data) => {
           let newList = [...[data]];
           this.setState({
