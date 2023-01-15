@@ -3,7 +3,6 @@ import { Col } from 'reactstrap';
 import Search from './Search.jsx';
 import VideoPlayer from './VideoPlayer.jsx';
 import searchYouTube from '../helpers/searchYouTube.js';
-import TUBE_API from '../helpers/youtube.config.js';
 class ViewFinder extends React.Component {
 
   constructor(props) {
@@ -26,7 +25,7 @@ class ViewFinder extends React.Component {
 
   getYouTubeVideos(query) {
     var options = {
-      key: TUBE_API,
+      key: process.env.TUBE_API,
       query: query
     };
     searchYouTube(options, (videos) => {
